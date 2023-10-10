@@ -47,7 +47,8 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN}}
       - name: Docker Image Build and Push
         run: |
-          docker build
+          docker build -t gdsc .
+          docker push ${{ secrets.DOCKER_USERNAME }}/gdsc
           
 
     
