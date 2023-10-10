@@ -48,6 +48,7 @@ jobs:
       - name: Docker Image Build and Push
         run: |
           docker build -t gdsc .
+          docker tag gdsc:latest ${{ secrets.DOCKER_USERNAME }}/gdsc:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/gdsc
           
 
