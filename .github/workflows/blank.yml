@@ -30,6 +30,13 @@ jobs:
 
       - name: Install NodePackage
         run: yarn install --production
+
+      - name: Install jest
+        run: yarn add jest
+
+      - name: Run test
+        run: yarn test
+        
           
       
             
